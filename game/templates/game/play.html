@@ -1,0 +1,24 @@
+Game active
+<br><br>
+<form action="{% url 'game:play' %}" method="POST">
+    {% csrf_token %}
+    
+    <input type="hidden" value="{{game.id}}" name="game" id="game">
+
+    {% for key,value in images.items %}
+    Ques -> <img src="{{key.pic.url}}" width="100" height="100" id="primary_{{key.id}}">
+    <br><br><br>
+    Options ->
+    {% for sec in value %}
+            <!-- {{sec}} -->
+            <img src="{{sec.pic.url}}" width="100" height="100">
+            <input type="checkbox" name="secondary_{{sec.id}}" value="1">
+        {% endfor %}
+        <br><br><br><br>
+
+    {% endfor %}
+
+    <input type="submit" name="submit">
+</form>
+
+

@@ -1,0 +1,7 @@
+User Login
+<form action="{% url 'UserAuth:user_login' message %}" method="POST">
+    {% csrf_token %}
+    Email: <input type="email" name="email">
+    Password: <input type="password" name="password">
+    <input type="submit" name="submit">
+</form>

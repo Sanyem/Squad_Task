@@ -1,0 +1,12 @@
+{{message}}
+Signup
+<form action="{% url 'UserAuth:signup' message %}" method="POST">
+    {% csrf_token %}
+    First Name: <input type="text" name="first_name">
+    Last Name: <input type="text" name="last_name">
+    Email: <input type="email" name="email">
+    Password: <input type="password" name="password">
+    Confirm Password: <input type="password" name="confirm_password">
+    
+    <input type="submit" name="submit">
+</form>
