@@ -1,5 +1,5 @@
 # Squad Coding Task
-
+- Go thru info.txt for better understanding
 
 
 ## Problem Statement: 
