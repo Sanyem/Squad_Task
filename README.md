@@ -16,30 +16,30 @@ As part of this activity, you have to create an ESP Game e.g. Artigo is an esp g
 
 ## To run in your own system
 - Clone the github repo
-- Create a virtual environment
+- Create a virtual environment <br />
     -- virtualenv -p python3 venv
-- Activate venv
+- Activate venv <br />
     -- source venv/bin/activate
-- Go to the project directory
+- Go to the project directory <br />
     -- cd Squad_Task
-- Install all the requirements from requirements.txt
+- Install all the requirements from requirements.txt <br />
     -- pip install -r requirements.txt
-- Connect with your database (Postgres)
-    -- Open postgres in terminal(psql)
-    -- CREATE DATABASE squad;
-    -- Change database user and name in settings.py
-    -- GRANT ALL PRIVILEGES ON DATABASE squad TO user;
-- Make migrations
-    -- python manage.py makemigrations
+- Connect with your database (Postgres) <br />
+    -- Open postgres in terminal(psql) <br />
+    -- CREATE DATABASE squad; <br />
+    -- Change database user and name in settings.py <br />
+    -- GRANT ALL PRIVILEGES ON DATABASE squad TO user; <br />
+- Make migrations <br />
+    -- python manage.py makemigrations <br />
     -- python manage.py migrate
-- Create Superuser
+- Create Superuser <br />
     -- python manage.py createsuperuser
-- Run the django project
+- Run the django project <br />
     -- python manage.py runserver
-- Go to admin panel
+- Go to admin panel <br />
     -- url/admin
 - Add primary and secondary images under images table
-- Run the project(localhost)
+- Run the project(localhost) <br />
     -- url
 - Signup
 - Login
