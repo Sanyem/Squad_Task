@@ -6,6 +6,7 @@ Assumptions
     - If less than 5 images are left that need to reach consensus, only then less than 5 images are shown in the task.
     - After player submits the task, he/she gets redirected to the profile page where we have a button for play game. So from there player can play another game. (For this feature - Player, if wants, can play one task after completing another)
     - A total score for each player is being calculated over all games played. Scores for individual games are not stored. Scores are updated when both players have submitted their repsonses for a particular task.
+    - I have not written comments for documentation purposes
 
 
 Other thinking if enough time is given for the assignment
