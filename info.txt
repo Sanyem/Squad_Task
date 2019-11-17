@@ -1,0 +1,28 @@
+Assumptions
+
+    - A player can get the same question multiple times
+    - If consensus is reached for a primary image then that image will not be shown as a question. 
+    - If by the time user submits responses, a question has reached consensus then store the user's responses, give them a point if valid but don't update the consensus status.
+    - If less than 5 images are left that need to reach consensus, only then less than 5 images are shown in the task.
+    - After player submits the task, he/she gets redirected to the profile page where we have a button for play game. So from there player can play another game. (For this feature - Player, if wants, can play one task after completing another)
+    - A total score for each player is being calculated over all games played. Scores for individual games are not stored. Scores are updated when both players have submitted their repsonses for a particular task.
+
+
+Other thinking if enough time is given for the assignment
+
+    - A player can get a question only once. This will increase complexity as we need to arrange games in a more complex way. For example, if A has started the game and got questions(1,2,3,4,5). Now player B joins. but player B has already answered Question 1. Then B will not be paired with A. A new player C will be paired with A.
+    - Mostly kept in mind using coding practicies such as DRY and tried to normalise the database
+    - Right now, I am showing all 5 questions in one page. But if given enough time, then I will show questions one by one. And keep the responses in a temporary storage(can be browser cache or a temp table in database) until all 5 questions are answered and submitted.
+    - Individual game scoring. This is a bit complex task. For example, if Player A has started but no other player is online then player A will submit responses but we don't have any plpayer B with whom we can match and score. So the scoring of game will be delayed.
+
+
+What's Happening now (Go thru schema.png for better understanding)
+
+    - After player logins and click on start game
+        -- Player hasn't submitted responses for the last game
+            --- Play the last game that player left
+        -- Player has submitted responses for the last game
+            --- A new game is created
+            --- Player is paired with a player and joins an already created game
+
+    
